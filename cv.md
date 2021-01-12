@@ -15,7 +15,112 @@
 
 #### Code examples 
 
-
+```javascript
+import Bus from '../Bus.js';
+import ApiUser from '../../api/users.js';
+import ApiPagination from '../../api/pagination.js';
+export default {
+  data(){
+    return{
+      pagination: {},
+      users: {},
+      user_role: {},
+      isUser: false,
+      showEdite: false,
+      roles: {},
+      selectedRole: null,
+      errors: null,
+      modal: {}
+    }
+  },
+  created() {
+    ApiUser.get().then(data => {
+      this.pagination = data.data;
+      this.users = data.data.data;
+      this.roles = data.role;
+    });
+  },
+  methods: {
+    nextPageUrl() {
+      if (this.pagination.current_page != this.pagination.last_page) {
+        let params = {
+          path: this.pagination
+        };
+        ApiPagination.next(params).then(data => {
+          this.pagination = data.data;
+          this.users = data.data.data;
+        });
+      }
+    },
+    prevPageUrl() {
+      if (this.pagination.current_page != 1) {
+        let params = {
+          path: this.pagination
+        };
+        ApiPagination.prev(params).then(data => {
+          this.pagination = data.data;
+          this.users = data.data.data;
+        });
+      }
+    },
+    PageUrl(pageNo) {
+      if (this.pagination.current_page != pageNo) {
+        let params = {
+          path: this.pagination,
+          pageNo
+        };
+        ApiPagination.page(params).then(data => {
+          this.pagination = data.data;
+          this.users = data.data.data;
+        });
+      }
+    },
+    showUser(id){
+      ApiUser.show(id)
+        .then( (data) => {
+          this.errors = null;
+          this.user_role = data;
+          this.isUser = true;
+        }).catch( (error) => {
+          this.errors = [error.response.data.message];
+        });
+    },
+    showTableUsers(){
+      this.isUser = false;
+    },
+    showEditeRoleUser(id){
+      if ( this.showEdite == id )
+        this.showEdite = false;
+      else
+        this.showEdite = id;
+    },
+    destroyUserRole(user){
+      ApiUser.deleteRole(user.id)
+        .then( (data) => {
+          this.errors = null;
+          user.role = null;
+        }).catch( (error) => {
+          this.errors = [error.response.data.message];
+        });
+    },
+    changeRole(user){
+      let params = {
+        roleId: this.selectedRole.id,
+        userId: user.id
+      };
+      ApiUser.changeRole(params)
+        .then( (data) => {
+          this.errors = null;
+          user.role = this.selectedRole;
+          this.showEdite = false;
+          this.selectedRole = null;
+        }).catch( (error) => {
+          this.errors =  error.response.data.errors.roleId;
+        });
+    },
+  }
+};
+```
 
 #### Experience 
 __Work experience__ 
