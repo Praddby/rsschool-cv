@@ -1,0 +1,145 @@
+body {
+	font-family: 'Proxima Nova Regular', sans-serif;
+	font-size: 14px;
+	margin: 0;
+	background-color: #EFEFEF;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	width: 100%;
+	max-width: 780px;
+	margin: 0 auto;
+}
+
+.header {
+	margin-top: 50px;
+	padding: 30px; 
+	background-color: #fff;
+	width: 100%;
+	display: flex;
+	box-shadow: 0 0 5px #aaa;
+	border-radius: 3px;
+}
+
+.header-photo {
+	height: 230px;
+	box-shadow: 0 0 4px #777;
+	margin: 0 70px 0 20px;
+}
+.about-me {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.header-title {
+	margin-bottom: 20px;
+}
+
+.header-title h1 {
+	text-transform: uppercase;
+	font-family: 'Proxima Nova Bold', sans-serif;
+}
+
+.header-title .name {
+	color: #B22222;
+}
+
+.header-title h3 {
+	color: #aaa;
+}
+
+.header-address {
+	display: flex;
+
+}
+
+.address-title {
+	margin-right: 30px;
+}
+
+.address-title li {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.address-name li {
+	margin-bottom: 5px;
+}
+.address-title li:last-child,
+.address-name li:last-child {
+	margin-bottom: 0;
+}
+
+.social-links {
+	display: flex;
+}
+
+.facebook {
+	width: 50px;
+	height: 50px;
+	background: url("../img/social icons/facebook.svg");
+	cursor: pointer;
+}
+
+.facebook:hover {
+	background: url("../img/social icons/facebook-color.svg");
+}
+
+.github {
+	width: 50px;
+	height: 50px;
+	background: url("../img/social icons/github.svg");
+	cursor: pointer;
+}
+
+.github:hover {
+	background: url("../img/social icons/github-color.svg");
+}
+
+.google {
+	width: 50px;
+	height: 50px;
+	background: url("../img/social icons/google.svg");
+	cursor: pointer;
+}
+
+.google:hover {
+	background: url("../img/social icons/google-color.svg");
+}
+
+.linkedin {
+	width: 50px;
+	height: 50px;
+	background: url("../img/social icons/linkedin.svg");
+	cursor: pointer;
+}
+
+.linkedin:hover {
+	background: url("../img/social icons/linkedin-color.svg");
+}
+
+.skype {
+	width: 50px;
+	height: 50px;
+	background: url("../img/social icons/skype.svg");
+	cursor: pointer;
+}
+
+.skype:hover {
+	background: url("../img/social icons/skype-color.svg");
+}
