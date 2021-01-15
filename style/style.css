@@ -26,9 +26,12 @@ a {
 	margin: 0 auto;
 }
 
+
+/*----- header -----*/
+
 .header {
 	margin-top: 50px;
-	padding: 30px; 
+	padding: 50px 30px; 
 	background-color: #fff;
 	width: 100%;
 	display: flex;
@@ -87,13 +90,18 @@ a {
 
 .social-links {
 	display: flex;
+	margin: 0 0 -10px -8px;
+}
+
+.social-links span {
+	display: inline-block;
+	transition: background .2s linear;
+	width: 50px;
+	height: 50px;
 }
 
 .facebook {
-	width: 50px;
-	height: 50px;
 	background: url("../img/social icons/facebook.svg");
-	cursor: pointer;
 }
 
 .facebook:hover {
@@ -101,10 +109,7 @@ a {
 }
 
 .github {
-	width: 50px;
-	height: 50px;
 	background: url("../img/social icons/github.svg");
-	cursor: pointer;
 }
 
 .github:hover {
@@ -112,10 +117,7 @@ a {
 }
 
 .google {
-	width: 50px;
-	height: 50px;
 	background: url("../img/social icons/google.svg");
-	cursor: pointer;
 }
 
 .google:hover {
@@ -123,10 +125,7 @@ a {
 }
 
 .linkedin {
-	width: 50px;
-	height: 50px;
 	background: url("../img/social icons/linkedin.svg");
-	cursor: pointer;
 }
 
 .linkedin:hover {
@@ -134,12 +133,131 @@ a {
 }
 
 .skype {
-	width: 50px;
-	height: 50px;
 	background: url("../img/social icons/skype.svg");
-	cursor: pointer;
 }
 
 .skype:hover {
 	background: url("../img/social icons/skype-color.svg");
 }
+
+/*----- end header -----*/
+
+
+/*----- skills -----*/
+
+.skills {
+	margin-top: 70px;
+}
+
+.skills-title {
+	color: #B22222;
+	text-align: center;
+	font-size: 2em;
+	text-transform: uppercase;
+	font-family: 'Proxima Nova Bold', sans-serif;
+	margin-bottom: 50px
+}
+
+.skills-body {
+	display: flex;
+}
+
+.front-end,
+.back-end {
+	padding: 30px; 
+	background-color: #fff;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 0 5px #aaa;
+	border-radius: 3px;
+	position: relative;
+}
+
+.front-end {
+	margin-right: 10px;
+}
+.back-end {
+	margin-left: 10px;
+}
+
+.front-end--title,
+.back-end--title {
+	padding: 10px 15px;
+	background-color: #B22222;
+	color: #fff;
+	text-transform: uppercase;
+	box-shadow: 0 0 5px #aaa;
+	border-radius: 3px;
+	position: absolute;
+	top: -15px;
+	left: 40%;
+}
+
+.skills-description {
+	margin-top: 20px;
+}
+
+.skill {
+	margin-bottom: 10px;
+}
+
+.skills-label{
+	color: #747474;
+	display: flex;
+	justify-content: space-between;
+}
+
+.skills-diagram {
+	position: relative;
+	width: 100%;
+	height: 15px;
+	background-color: #747474;
+	border-radius: 2px;
+	box-shadow: 0 0 2px #333;
+}
+
+.skills-active {
+	position: absolute;
+	height: 15px;
+	background-color: #B22222;
+	border-radius: 2px;
+}
+
+.js-active {
+	width: 70%;
+}
+
+.html-css-label {	
+	text-transform: uppercase;
+}
+
+.html-css-active {
+	width: 90%;
+}
+
+.jquery-active {
+	width: 85%;
+}
+
+.vue-active {
+	width: 55%;
+}
+
+.php-active {
+	width: 90%;
+}
+
+.mysql-active {
+	width: 85%;
+}
+
+.laravel-active {
+	width: 65%;
+}
+
+.wordpress-active {
+	width: 45%;
+}
+
+/*----- end skills -----*/
