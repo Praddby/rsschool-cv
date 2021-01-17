@@ -1,1 +1,1 @@
-https://Praddby.github.io/rsschool-cv/cv
+https://Praddby.github.io/rsschool-cv/
