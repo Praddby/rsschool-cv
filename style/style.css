@@ -24,13 +24,17 @@ a {
 	width: 100%;
 	max-width: 780px;
 	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
 }
 
 
 /*----- header -----*/
 
 .header {
-	margin-top: 50px;
+	margin-top: 30px;
 	padding: 50px 30px; 
 	background-color: #fff;
 	width: 100%;
@@ -145,17 +149,13 @@ a {
 
 /*----- skills -----*/
 
-.skills {
-	margin-top: 70px;
-}
-
 .skills-title {
 	color: #B22222;
 	text-align: center;
 	font-size: 2em;
 	text-transform: uppercase;
 	font-family: 'Proxima Nova Bold', sans-serif;
-	margin-bottom: 50px
+	margin-bottom: 30px
 }
 
 .skills-body {
@@ -261,3 +261,40 @@ a {
 }
 
 /*----- end skills -----*/
+
+/* ---- footer ----*/
+.footer {
+	
+	padding: 30px; 
+	background-color: #fff;
+	width: 100%;
+	display: flex;
+	box-shadow: 0 0 5px #aaa;
+	border-radius: 3px 3px 0 0;
+}
+
+.footer-links {
+	display: flex;
+	width: 50%;
+	color: #747474;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.footer-links span {
+	display: inline-block;
+	transition: background .2s linear;
+	width: 50px;
+	height: 50px;
+}
+.footer-links span.rsschool {
+	width: 80px;
+	height: 50px;
+}
+.rsschool {
+	background: url("../img/RS.svg") no-repeat center;
+}
+
+.rsschool:hover {
+	background: url("../img/RS-hover.svg") no-repeat center;
+}
