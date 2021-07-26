@@ -1,0 +1,68 @@
+html,
+body {
+  height: 297mm !important;
+  width: 210mm !important;
+  font-size: 14px !important;
+}
+
+@page {
+  margin: 20mm 10mm 20mm 20mm !important;
+}
+
+*,
+*:before,
+*:after {
+  color: #000 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+h1 {
+  font-size: 24px !important;
+}
+h2 {
+  font-size: 20px !important;
+  margin: 20px 0 10px !important;
+}
+h3 {
+  font-size: 18px !important;
+}
+
+.social-links,
+.summary,
+.examples,
+.projects,
+.year {
+  display: none;
+}
+
+.container {
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.git,
+.cv,
+.footer-title {
+  display: inline-block;
+}
+
+.header {
+  margin-top: 10px;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.header-photo {
+  height: 150px;
+}
+
+.footer {
+  margin-top: 10px;
+  padding: 10px 30px;
+}

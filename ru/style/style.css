@@ -423,8 +423,23 @@ a {
   display: flex;
   box-shadow: 0 0 5px #aaa;
   border-radius: 3px 3px 0 0;
+  flex-direction: column;
 }
 
-.footer p {
+.footer div {
   color: #747474;
+}
+
+.git,
+.cv,
+.footer-title {
+  display: none;
+}
+
+.footer-title {
+  color: #b22222;
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-family: "Proxima Nova Bold", sans-serif;
 }
